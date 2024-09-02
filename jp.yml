@@ -1,0 +1,149 @@
+# plugin prefix
+prefix: '&6[&b国税庁税金管理システム&6] '
+
+# messages that support placeholders have them listed as comments on the right of the message
+# hexadeciaml color codes are also supported (e.g. #ff0000, #00ff00)
+# if you need # in your string but not as a color code, escape it with \ (e.g. \#hashtag)
+
+# 通常メッセージ
+reload-success: '&a国税庁はりロードされました！!'
+reload-fail: '&c設定/メッセージファイルの読み込みに失敗しました。このメッセージがエラーであると思われる場合には制作者へご連絡ください。'
+invalid-command: '&cこのコマンドはありません。&6/quicktax help&c!'
+invalid-syntax: '&cこのコマンドは無効です。 &6/quicktax help&c!'
+invalid-schedule: '&c無効なスケジュールを見つけました！スケジュールファイルをご確認ください。'
+no-permission: '&c貴方にはこのコマンドを実行する権限はありません。'
+storage-disabled: '&cこの機能を実行させるには、ストレージについてconfigにて設定される必要があります。'
+player-not-exist: '&c %player% はこのサーバーに参加していない/タイプミスがあります。' # %player%
+player-load-in-progress: '&cプレイヤーデータをロード中です。しばらくお待ちください。'
+
+# 納税関係
+tax-collect-individual-in-progress: '&a%player%から確定申告を開始します。' # %player%
+tax-collect-all-in-progress: '&a全てのプレイヤーから確定申告を開始します。'
+tax-collect-rank-in-progress: '&a累進課税により全てのプレイヤーの税金を確定します。'
+tax-collect-bal-in-progress: '&aプレイヤーの残高から税金を確定し徴収を開始します。'
+tax-collect-activity-in-progress: '&aプレイヤーの活動などに応じて税金を確定し徴収を開始します。'
+tax-collect-success-individual: '&a%player%から税金を徴収しました。' # %player%
+tax-collect-success-all: '&a全てのプレイヤーから税金を徴収しました。'
+tax-collect-success-rank: '&a累進課税により確定した金額で全てのプレイヤーから税金を徴収しました。'
+tax-collect-success-bal: '&a残高により確定した金額で全てのプレイヤーから税金を徴収しました。'
+tax-collect-success-activity: '&aプレイヤーの活動により確定した金額で全てのプレイヤーから税金を徴収しました。'
+tax-withdraw-success: '&a税金の残高は正常に引き出されました。'
+tax-withdraw-fail: '&cこのサーバーの税金が不足しています。'
+tax-collect-fail-individual: '&b%player% &cは税金を払うための残高が不足しています。' # %player%
+tax-collect-already-running: '&c今実行している税金徴収タスクが実行中です。あとでもう一度お試しください。'
+tax-exempt: '&c&b%player% &cは納税対象外です。'
+player-pay-tax-fail: '&c%player%は納税するための残高がありません。' # %player%
+player-pay-tax-success: '&a%player%は納税額%amount%円の金額を国庫へ納入した。' # %player%, %amount%
+player-receive-tax-money: '&a国庫から%amount%円が返還されました。' # %amount%
+
+# 管理者が国庫の残高を不正に操るメッセージ
+admin-add-server-balance: '&a国庫の金額が不正に操られ%amount%円が増えました。' # %amount%
+admin-take-server-balance: '&a国庫の金額が不正に操られ%amount%円が引かれました。' # %amount%
+admin-set-server-balance: '&a国庫の金額が不正に操られ%amount%円にセットされました。' # %amount%
+
+# スケジュール関係のメッセージ
+schedule-disabled: '&cこのコマンドを実行するにはconfigでscheduleの項目を有効にする必要があります。'
+schedule-not-found: '&c税金を徴収するためのスケジュールが設定されていません。'
+schedule-run: '&a只今徴収スケジュールが実行されています。'
+schedule-stop: '&c只今徴収スケジュールが停止しています。'
+schedule-already-running: '&c徴収スケジュールはすでに実行されています。'
+schedule-not-running: '&c税金の徴収は行われておりません。'
+schedule-not-exist: '&c入力された[%schedule%]というスケジュールは存在しておりません。' # %schedule%
+
+# リーダーボードメッセージ
+update-started: '&a納税者リーダーボードの更新を開始しました。'
+update-in-progress: '&c納税者リーダーボードの更新は現在進行中です。'
+update-complete: '&a納税者リーダーボードの更新が完了しました。'
+no-updated-leaderboard: '&c納税者リーダーボードはまだ更新されていません。'
+quicktax-sign-placed: '&a%rank%のリーダーボードが設置されました。' #%rank%
+quicktax-sign-broken: '&a%rank%のリーダーボードが壊れています。' #%rank%
+no-quicktax-sign-add-permission: '&cリーダーボードを設置する権限がありません。もう一度お試しください。'
+no-quicktax-sign-remove-permission: '&c貴方にはリーダーボードを壊す権限がありません。'
+
+# format for help command
+help-header: '&b----- &6Commands &b-----'
+help-body: |
+  &a/quicktax help &b- view the list of commands
+  &a/quicktax pay <金額> &b- pay tax to the server
+  &a/quicktax top &b- view tax payer leaderboard
+  &a/quicktax stats &b- view your own tax stats
+  &a/quicktax stats <MCID> &b- view a specific player's tax stats
+  &a/quicktax collectall &b- tax all players
+  &a/quicktax collectrank &b- tax players based on rank
+  &a/quicktax collectbal &b- tax players based on balance
+  &a/quicktax collectactivity &b- tax players based on activity
+  &a/quicktax collectname <MCID> <金額> &b- tax a specific player
+  &a/quicktax server stats &b- view the server total tax stats
+  &a/quicktax server withdraw <金額> &b- withdraw money to self from server tax balance
+  &a/quicktax server withdraw <金額> <MCID> &b- withdraw money to player from server tax balance
+  &a/quicktax server admin add <金額> &b- add money to the server tax balance
+  &a/quicktax server admin take <金額> &b- take money from the server tax balance
+  &a/quicktax server admin set <金額> &b- set the server tax balance
+  &a/quicktax schedule start &b- start tax collection schedules
+  &a/quicktax schedule stop &b- stop tax collection schedules
+  &a/quicktax schedule view &b- view all schedules
+  &a/quicktax schedule view <MCID> &b- view a specific schedule
+  &a/quicktax update &b- manually trigger an update for the leaderboard
+  &a/quicktax reload &b- reloads the plugin
+help-footer: '次のページを表示するには、&e/quicktax help %page%　と入力してください。' # %page% is the next page number
+
+# 納税者のステータスを表示するフォーマット
+# 下記のフォーマットをサポートしています。
+  # %player%
+  # %latesttaxpaid%
+  # %totaltaxpaid%
+player-stats: |
+  &b----- &6%player% の納税状況 &b-----
+  &a一番最後の納税額: &b%latesttaxpaid%
+  &aすべての納税額: &b%totaltaxpaid%
+
+# サーバーステータスを表示するための形式
+# 下記のフォーマットをサポートしています。
+  # %totaltaxcollected%
+  # %totaltaxbalance%
+server-stats: |
+  &b----- &6国税庁のステータス &b-----
+  &a納税徴収額合計: &b%totaltaxcollected%
+  &a国庫の残高: &b%totaltaxbalance%
+
+# スケジュールの状態を表示するための形式
+# 下記のフォーマットをサポートしています。
+  # %schedulename%
+  # %enabled%
+  # %fixedstarttime%
+  # %timezone%
+  # %hour%
+  # %minute%
+  # %second%
+  # %frequency%
+  # %type%
+  # %nextruntime%
+schedule-view: |
+  &b----- &6%schedulename% &b-----
+  &a有効: &b%enabled%
+  &aタスク開始時間: &b%fixedstarttime%
+  &aタイムゾーン: &b%timezone%
+  &a開始時間: &b%hour%h %minute%m %second%s
+  &a頻度: &b%frequency%s
+  &aタイプ: &b%type%
+  &a次の開始時間: &b%nextruntime%
+
+# リーダーボードのフォーマット(1行目、2行目は固定、3行目より変更可能)
+# 下記のフォーマットをサポートしています。
+# %player%
+# %totaltaxpaid%
+leaderboard-sign: |
+  &a&l%player%
+  &c&l%totaltaxpaid%
+
+# リーダーボードのフォーマット
+leaderboard-header: |
+  &b----- &6Tax Payer Leaderboard &b-----
+
+# %num% は納税額順位 %player% はMCID %totaltaxpaid% は納税額合計
+leaderboard-body: |
+  &a%num% &b%player%: &e%totaltaxpaid%
+
+# %page% には次のページ番号が入ります。
+leaderboard-footer: |
+  &6次のページを表示するには、&e/qt top %page%  と入力してください。
