@@ -6,7 +6,7 @@ prefix: '&6[&b国税庁税金管理システム&6] '
 # if you need # in your string but not as a color code, escape it with \ (e.g. \#hashtag)
 
 # 通常メッセージ
-reload-success: '&a国税庁はりロードされました！!'
+reload-success: '&a国税庁はリロードされました！!'
 reload-fail: '&c設定/メッセージファイルの読み込みに失敗しました。このメッセージがエラーであると思われる場合には制作者へご連絡ください。'
 invalid-command: '&cこのコマンドはありません。&6/quicktax help&c!'
 invalid-syntax: '&cこのコマンドは無効です。 &6/quicktax help&c!'
