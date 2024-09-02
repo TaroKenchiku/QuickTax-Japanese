@@ -61,30 +61,30 @@ no-quicktax-sign-add-permission: '&cリーダーボードを設置する権限�
 no-quicktax-sign-remove-permission: '&c貴方にはリーダーボードを壊す権限がありません。'
 
 # format for help command
-help-header: '&b----- &6Commands &b-----'
+help-header: '&b----- &6コマンド &b-----'
 help-body: |
-  &a/quicktax help &b- view the list of commands
-  &a/quicktax pay <金額> &b- pay tax to the server
-  &a/quicktax top &b- view tax payer leaderboard
-  &a/quicktax stats &b- view your own tax stats
-  &a/quicktax stats <MCID> &b- view a specific player's tax stats
-  &a/quicktax collectall &b- tax all players
-  &a/quicktax collectrank &b- tax players based on rank
-  &a/quicktax collectbal &b- tax players based on balance
-  &a/quicktax collectactivity &b- tax players based on activity
-  &a/quicktax collectname <MCID> <金額> &b- tax a specific player
-  &a/quicktax server stats &b- view the server total tax stats
-  &a/quicktax server withdraw <金額> &b- withdraw money to self from server tax balance
-  &a/quicktax server withdraw <金額> <MCID> &b- withdraw money to player from server tax balance
-  &a/quicktax server admin add <金額> &b- add money to the server tax balance
-  &a/quicktax server admin take <金額> &b- take money from the server tax balance
-  &a/quicktax server admin set <金額> &b- set the server tax balance
-  &a/quicktax schedule start &b- start tax collection schedules
-  &a/quicktax schedule stop &b- stop tax collection schedules
-  &a/quicktax schedule view &b- view all schedules
-  &a/quicktax schedule view <MCID> &b- view a specific schedule
-  &a/quicktax update &b- manually trigger an update for the leaderboard
-  &a/quicktax reload &b- reloads the plugin
+  &a/quicktax help &b- コマンド一覧
+  &a/quicktax pay <金額> &b- 国庫へ税金を納入する。
+  &a/quicktax top &b- 納税者のリーダーボードを国税庁のシステムへ照会し閲覧する。
+  &a/quicktax stats &b- 全ての税金の統計を国税庁のシステムへ照会し閲覧する。
+  &a/quicktax stats <MCID> &b- 特定のプレイヤーのステータスを国税庁のシステムへ照会し閲覧する。
+  &a/quicktax collectall &b- 全ての納税対象者へ税金を課税するし国税庁へ税金を納入させる。
+  &a/quicktax collectrank &b- 累進課税に基づき国税庁へ税金を納入させる。
+  &a/quicktax collectbal &b- 課税者の金額に対し国税庁へ税金を納入させる。
+  &a/quicktax collectactivity &b- 活動に対し国税庁へ税金を納入させる。
+  &a/quicktax collectname <MCID> <金額> &b- 特定のプレイヤーへ税金を納入させる。 (実行例:必ず試してみてください。/quicktax collectname k0u531 100)
+  &a/quicktax server stats &b- 国庫の税金の統計をみる。
+  &a/quicktax server withdraw <金額> &b- 国庫から税金を引き出す。
+  &a/quicktax server withdraw <金額> <MCID> &b- 国庫から直接プレイヤーへ税金を還付させる。
+  &a/quicktax server admin add <金額> &b- 魔法の力を使い国庫の税金を不正に操り国庫の残高を追加する。(法に抵触する恐れあり)
+  &a/quicktax server admin take <金額> &b- 魔法の力を使い国庫の税金を不正に操り国庫の残高を減らす。(法に抵触する恐れあり)
+  &a/quicktax server admin set <金額> &b- 魔法の力を使い国庫の税金を不正に操り国庫の残高を指定した額にする。(法に抵触する恐れあり)
+  &a/quicktax schedule start &b- 税金徴収システムを実行し自動引き落としを開始する。
+  &a/quicktax schedule stop &b- 税金徴収システムを停止し自動引き落としを停止する。
+  &a/quicktax schedule view &b- 全ての登録されている税金徴収システムを国税庁へ照会し閲覧する。
+  &a/quicktax schedule view <MCID> &b- 特定の国民へ課されている税金徴収システムの情報を国税庁へ照会し閲覧する。
+  &a/quicktax update &b- リーダーボードの更新を手動で行う。
+  &a/quicktax reload &b- 国税庁税金管理システムに不具合などが起こった場合にシステムを再起動する。
 help-footer: '次のページを表示するには、&e/quicktax help %page%　と入力してください。' # %page% is the next page number
 
 # 納税者のステータスを表示するフォーマット
